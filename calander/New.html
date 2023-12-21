@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image</title>
+    <link rel="stylesheet" href="New.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="calander">
+            <div class="left">
+                <p id="date">13</p>
+                <p id="day">Sunday</p>
+            </div>
+            <div class="right">
+                <p id="mounth">Jusvary</p>
+                <p id="year">2022</p>
+            </div>
+        </div>
+    </div>
+    <script>
+    const date=document.getElementById('date');
+    const day=document.getElementById('day');
+    const mounth=document.getElementById('mounth');
+    const year=document.getElementById('year');
+    var today=new Date();
+    const weekDays=['Sunday','Mounday','Tuesday','Wendsday','Tursday','Faryday','Starday',];
+    const allMounth=['janvary','febray','march','april','may','joun','jolay','agast','september','octobar','november','desember'];
+
+
+    date.innerHTML=(today.getDate()<10?'0':'')+today.getDate();
+    day.innerHTML=weekDays[today.getDay()];
+    mounth.innerHTML=allMounth[today.getMonth()];
+    year.innerHTML=today.getFullYear();
+
+
+    </script>
+</body>
+</html>
